@@ -86,6 +86,8 @@ npm start
 ```
 The server will be available at http://localhost:8080. Make sure to update the API endpoint in the Oh My LaTeX application to point to your custom server.
 
+ ![Alt Text](cors-setup.png)
+
 You can update it in the `CROS_PROXY` variable here in the file `/src/services/api.jsx`:
 
  ![Alt Text](cors.png)
