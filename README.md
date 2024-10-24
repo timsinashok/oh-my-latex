@@ -60,12 +60,12 @@ To use the custom server, follow these steps:
 
 Clone the custom server repository:
 ``` bash
-git clone https://github.com/yourusername/oh-my-latex-server.git
+git clone https://github.com/Rob--W/cors-anywhere.git
 ```
 
 Navigate to the project directory:
 ```
-cd oh-my-latex-server
+cd cors-anywhere
 ```
 
 Install the dependencies:
@@ -78,6 +78,12 @@ Start the server:
 npm start
 ```
 The server will be available at http://localhost:8080. Make sure to update the API endpoint in the Oh My LaTeX application to point to your custom server.
+
+You can update it in the `CROS_PROXY` variable here in the file `/src/services/api.jsx`:
+
+ ![Alt Text](cors.png)
+
+ Now after resolving CROS restrictions, the app is ready to run. 
 
 ## 2. Running the platform
 1. Start the development server:
@@ -93,29 +99,27 @@ http://localhost:3000
 ## 🔧 Features
 
 - **Text to LaTeX Conversion**: Convert plain text to LaTeX format
-- **Real-time Preview**: See the LaTeX code as you type
+- **Append to existing latex**: Converted latex can be appended to pre-existing latex code
+- **Cursor Position Support**: Insert LaTeX at cursor position in editor
 - **Copy to Clipboard**: Easily copy the generated LaTeX code
 - **Error Handling**: Clear error messages for failed conversions
 - **Loading States**: Visual feedback during conversion process
-- **Responsive Design**: Works on both desktop and mobile devices
-- **Cursor Position Support**: Insert LaTeX at cursor position in editor
+
 
 
 ## 📝 Usage
 
 1. Enter your text in the left panel
-2. Click "Convert & Insert" to convert the text to LaTeX
+2. Click "Convert & Insert" to convert the text to LaTeX and inser at cursor position in the latex tab
 3. The converted LaTeX code appears in the right panel
 4. Use the copy button to copy the LaTeX code to clipboard
-5. Clear inputs using the clear button when needed
+
 
 ## 🔍 Error Handling
 
 The app handles various error scenarios:
 - API connection failures
-- Invalid input text
 - Conversion errors
-- Clipboard operation failures
 
 Error messages are displayed in a dismissible alert at the top of the page.
 
@@ -126,25 +130,6 @@ Error messages are displayed in a dismissible alert at the top of the page.
 3. Check the console for detailed error messages during development
 4. Use environment variables for API configuration
 
-
-
-### Testing
-
-Run the test suite:
-```bash
-npm test
-```
-
-### Building for Production
-
-Create a production build:
-```bash
-npm run build
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🤝 Contributing
 
