@@ -1,6 +1,9 @@
 # oh my latex
 
-oh my latex is a react application that converts plain text to LaTeX format using an API integration. The app features a dual-pane interface with text input and LaTeX output where user can enter text and add it to the latex editor. The goal of the project is to allow user to get latex code incrementally and make a document and eventually be able to copy the final latex code to render a documentl. 
+Oh My LaTeX is a React application that converts plain text to LaTeX format using an API integration. It allows users to add the converted LaTeX code to the existing LaTeX code in the pointer location within the editor. The app features a dual-pane interface with text input and LaTeX output, where users can enter text and add it to the LaTeX editor. The goal of the project is to enable users to incrementally build a document by adding LaTeX code and eventually copy the final LaTeX code to render a document.
+
+ ![Alt Text](image.png)
+
 
 ## 🚀 Quick Start
 
@@ -13,6 +16,7 @@ oh my latex is a react application that converts plain text to LaTeX format usin
 1. Clone the repository 
 ```bash
 git clone https://github.com/timsinashok/oh-my-latex.git
+cd oh-my-latex
 ```
 
 2. Install the required dependencies for the app from package.json:
@@ -47,8 +51,35 @@ oh-my-latex/
 
 ```
 
-### Running the Application
+# Running the Application
 
+## 1. API Integration and CORS Restrictions
+This application uses the latex2text.com API for text-to-LaTeX conversion. However, due to CORS restrictions, a custom server is used to bypass these restrictions. The custom server is hosted in a separate repository.
+
+To use the custom server, follow these steps:
+
+Clone the custom server repository:
+``` bash
+git clone https://github.com/yourusername/oh-my-latex-server.git
+```
+
+Navigate to the project directory:
+```
+cd oh-my-latex-server
+```
+
+Install the dependencies:
+```
+npm install
+```
+Start the server:
+
+```
+npm start
+```
+The server will be available at http://localhost:8080. Make sure to update the API endpoint in the Oh My LaTeX application to point to your custom server.
+
+## 2. Running the platform
 1. Start the development server:
 ```bash
 npm start

@@ -46,6 +46,7 @@ const LatexConverter = () => {
 
   return (
     <div className="latex-converter">
+        <h1 className="text-2xl font-semibold mb-4">oh my latex</h1>
       {error && <ErrorAlert message={error} onDismiss={() => setError('')} />}
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
