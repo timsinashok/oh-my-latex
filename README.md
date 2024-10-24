@@ -1,6 +1,6 @@
 # oh my latex
 
-Oh My LaTeX is a React application that converts plain text to LaTeX format using an API integration. It allows users to add the converted LaTeX code to the existing LaTeX code in the pointer location within the editor. The app features a dual-pane interface with text input and LaTeX output, where users can enter text and add it to the LaTeX editor. The goal of the project is to enable users to incrementally build a document by adding LaTeX code and eventually copy the final LaTeX code to render a document.
+Oh My LaTeX is a React application that converts plain text to LaTeX format using API integration. It allows users to add the converted LaTeX code to the existing LaTeX code in the pointer location within the editor. The app features a dual-pane interface with text input and LaTeX output, where users can enter text and add it to the LaTeX editor. The project aims to enable users to incrementally build a document by adding LaTeX code and eventually copy the final LaTeX code to render a document.
 
  ![Alt Text](image.png)
 
@@ -10,6 +10,13 @@ Oh My LaTeX is a React application that converts plain text to LaTeX format usin
 ### Prerequisites
 - Node.js (v14.0.0 or higher)
 - npm (v6.0.0 or higher)
+
+### API USED
+
+The project uses the `text2latex.com` API that is used in the text2latex.com website. The API returns the latex code for the given plain text. This is not a public API and does not have any documentation.  The API had CORS restrictions, so I had to start a proxy server to handle CORS restrictions. That is done with the help of the cors-anywhere GitHub repository. The details regarding this are presented below in   the `API Integration and CORS Restriction` section. 
+
+### AI-Generated Code
+The majority of the code in this repository has been developed using LLMs, mostly Claude and ChatGPT. Claude helped in defining all the components of the React app, and ChatGPT helped resolve error with CORS. 
 
 ### Installation
 
@@ -100,7 +107,7 @@ http://localhost:3000
 
 - **Text to LaTeX Conversion**: Convert plain text to LaTeX format
 - **Append to existing latex**: Converted latex can be appended to pre-existing latex code
-- **Cursor Position Support**: Insert LaTeX at cursor position in editor
+- **Cursor Position Support**: Insert LaTeX at the cursor position in the editor
 - **Copy to Clipboard**: Easily copy the generated LaTeX code
 - **Error Handling**: Clear error messages for failed conversions
 - **Loading States**: Visual feedback during conversion process
@@ -110,9 +117,9 @@ http://localhost:3000
 ## 📝 Usage
 
 1. Enter your text in the left panel
-2. Click "Convert & Insert" to convert the text to LaTeX and inser at cursor position in the latex tab
+2. Click "Convert & Insert" to convert the text to LaTeX and enter at the cursor position in the latex tab
 3. The converted LaTeX code appears in the right panel
-4. Use the copy button to copy the LaTeX code to clipboard
+4. Use the copy button to copy the LaTeX code to the clipboard
 
 
 ## 🔍 Error Handling
