@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This is a forwardRef component for a textarea element
 const TextArea = React.forwardRef(({ value, onChange, placeholder, className }, ref) => (
   <textarea
     ref={ref}
@@ -10,4 +11,5 @@ const TextArea = React.forwardRef(({ value, onChange, placeholder, className }, 
   />
 ));
 
+// Export the TextArea component
 export default TextArea;

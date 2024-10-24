@@ -1,6 +1,8 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
+
+// This is a button component that accepts a loading, onClick function, and disabled prop
 const ConvertButton = ({ loading, onClick, disabled }) => (
   <button
     className="button-primary"
@@ -18,4 +20,5 @@ const ConvertButton = ({ loading, onClick, disabled }) => (
   </button>
 );
 
+// Export the ConvertButton component
 export default ConvertButton;

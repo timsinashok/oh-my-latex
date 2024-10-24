@@ -1,5 +1,6 @@
 import React from 'react';
 
+// ErrorAlert component
 const ErrorAlert = ({ message, onDismiss }) => (
   <div className="error-alert">
     <span className="block sm:inline">{message}</span>
@@ -12,4 +13,6 @@ const ErrorAlert = ({ message, onDismiss }) => (
   </div>
 );
 
+
+// Export the ErrorAlert component
 export default ErrorAlert;
