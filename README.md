@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# oh my latex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+oh my latex is a react application that converts plain text to LaTeX format using an API integration. The app features a dual-pane interface with text input and LaTeX output where user can enter text and add it to the latex editor. The goal of the project is to allow user to get latex code incrementally and make a document and eventually be able to copy the final latex code to render a documentl. 
 
-## Available Scripts
+## 🚀 Quick Start
 
-In the project directory, you can run:
+### Prerequisites
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
 
-### `npm start`
+### Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository 
+```bash
+git clone https://github.com/timsinashok/oh-my-latex.git
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install the required dependencies for the app from package.json:
+```bash
+npm install 
+```
 
-### `npm test`
+3. Initialize Tailwind CSS:
+```bash
+npx tailwindcss init
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project Structure
+```
+oh-my-latex/
+├── public/
+├── src/
+│   ├── components/
+│   │  ├── LatexConverter.jsx
+│   │  ├── ErrorAlert.jsx
+│   │  ├── TextArea.jsx
+│   │  ├── Action Button.jsx
+│   │  └── ConvertButton.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── App.jsx
+│   ├── index.jsx
+│   └── index.css
+├── package.json
+├── README.md
+└── tailwind.config.js
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Start the development server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Open your browser and navigate to:
+```
+http://localhost:3000
+```
 
-### `npm run eject`
+## 🔧 Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Text to LaTeX Conversion**: Convert plain text to LaTeX format
+- **Real-time Preview**: See the LaTeX code as you type
+- **Copy to Clipboard**: Easily copy the generated LaTeX code
+- **Error Handling**: Clear error messages for failed conversions
+- **Loading States**: Visual feedback during conversion process
+- **Responsive Design**: Works on both desktop and mobile devices
+- **Cursor Position Support**: Insert LaTeX at cursor position in editor
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📝 Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Enter your text in the left panel
+2. Click "Convert & Insert" to convert the text to LaTeX
+3. The converted LaTeX code appears in the right panel
+4. Use the copy button to copy the LaTeX code to clipboard
+5. Clear inputs using the clear button when needed
 
-## Learn More
+## 🔍 Error Handling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app handles various error scenarios:
+- API connection failures
+- Invalid input text
+- Conversion errors
+- Clipboard operation failures
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Error messages are displayed in a dismissible alert at the top of the page.
 
-### Code Splitting
+## 💡 Tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. For best results, enter plain text without special formatting
+2. Use the cursor position feature to insert LaTeX at specific locations
+3. Check the console for detailed error messages during development
+4. Use environment variables for API configuration
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Run the test suite:
+```bash
+npm test
+```
 
-### Advanced Configuration
+### Building for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Create a production build:
+```bash
+npm run build
+```
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
